@@ -1,12 +1,54 @@
-body{
+body, .app{
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 body *{
   position: relative;
+}
+
+div.movableArea{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5em;
+  width: 100%;
+  /*border-bottom: .1em solid rgb(200,200,200);*/
+  z-index: 9;
+  -webkit-app-region: drag;
+}
+
+body .app > section{
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+section.mdOutput{
+  font-size: 1.1em;
+  padding: 2em 1em 1em 1em;
+  box-sizing: border-box;
+}
+
+section.mdInput textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  overflow: auto;
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  background-color: rgb(65,65,65);
+  color: rgb(255,255,255);
+  font-size: 1.1em;
+  padding: 2em 1em 1em 1em;
 }

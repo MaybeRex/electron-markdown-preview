@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <title>Markdown Preview</title>
     <link href='./lib/css/global.css' rel='stylesheet'>
+    <link href='./node_modules/github-markdown-css/github-markdown.css' rel = 'stylesheet'>
   </head>
   <body>
+    <script src = './lib/js/index.js'></script>
+
+    <script id = 'markdownOutput' type = 'text/x-handlebars-template'>
+      <section class = 'mdOutput markdown-body'>
+        {{{md}}}
+      </section>
+    </script>
+
+    <section class = 'app'>
+
+      <div class = 'movableArea'>
+      </div>
+
       <section class = 'mdInput'>
+        <textarea></textarea>
       </section>
 
-      <section class = 'mdResult'>
-      </section>
+    </section>
   </body>
 </html>
